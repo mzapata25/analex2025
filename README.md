@@ -11,6 +11,4 @@ Para este fin, se construyó tanto un autómata como una expresión regular que 
 ## Diseño
 
 Autómata:
-
-
-![Autómata drawio](https://github.com/user-attachments/assets/f8c69d03-e573-44c6-a6f8-fce14b0a3580)
+![Autómata drawio](https://github.com/user-attachments/assets/056788a4-7f1c-47e7-ad9b-15511e33b73b)
