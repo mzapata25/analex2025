@@ -2,13 +2,15 @@
 Por: Mateo Rodrigo Zapata Crapa (A01708573)
 
 ## Descripción
+Para este proyecto, todas las palabras usadas aquí provienen del lenguaje Quenya, uno de los varios lenguajes élficos creados por J. R. R. Tolkien (Quenya - Wikipedia, la enciclopedia libre, 2024).
+
 Este proyecto consiste en construir un analizador léxico que pueda determinar si una palabra es parte del lenguaje o no.
-En este caso, correspondía averiguar si una palabra forma parte del lenguaje compuesto por las palabras (amil, an, anarya, anca y and), provenientes del lenguaje élfico.
+En este caso, correspondía averiguar si una palabra forma parte del lenguaje compuesto por las palabras (amil, an, anarya, anca y and).
 Para este fin, se construyó tanto un autómata como una expresión regular que solamente admiten una palabra del lenguaje y descartan cualquier otra.
 
 ## Diseño
 
-![Autómata drawio](https://github.com/user-attachments/assets/056788a4-7f1c-47e7-ad9b-15511e33b73b)
+![Automata_Final](https://github.com/user-attachments/assets/b7493b67-27d9-4693-b798-387e82731dda)
 
 
 Expresión regular:
