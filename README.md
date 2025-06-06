@@ -4,7 +4,9 @@ Por: Mateo Rodrigo Zapata Crapa (A01708573)
 ## Descripción
 Para este proyecto, todas las palabras usadas aquí provienen del lenguaje Quenya, uno de los varios lenguajes élficos creados por J. R. R. Tolkien (Quenya - Wikipedia, la enciclopedia libre, 2024).
 
-El analizador léxico de este proyecto será usado con una base de un autómata finito determínistico. Este tipo de estructura se caracteriza por ir cambiando de manera automatizada según las instrucciones proporcionadas y por no tener ambigüedad, o sea, siempre que recibe una instrucción, realizará la misma acción, como desplazarse a otro estado, es la parte a la que nos referimos cuando decimos que es determinístico.
+El analizador léxico de este proyecto será usado con una base de un autómata finito determinístico (DFA). Este tipo de estructura se caracteriza por ir cambiando de manera automatizada según las instrucciones proporcionadas y por no tener ambigüedad, o sea, siempre que recibe una instrucción, realizará la misma acción, como desplazarse a otro estado, es la parte a la que nos referimos cuando decimos que es determinístico (Autómata finito determinista - Wikipedia, la enciclopedia libre, 2019).
+
+Una solución con un DFA es aquí considerada como la ideal, debido a que es un grupo de palabras pequeño (tan solo 5 palabaras), además de que es un fin claro, aprobar las 5 palabras y negar cualquier otra cadena. También hay que tener en cuenta que un autómata no determinístico introduce cierto elemento de ambigüedad, innecesario aquí y que hace bastante más compleja su implementación.
 
 Este proyecto consiste en construir un analizador léxico que pueda determinar si una palabra es parte del lenguaje o no.
 En este caso, correspondía averiguar si una palabra forma parte del lenguaje compuesto por las palabras (amil, an, anarya, anca y and).
@@ -19,6 +21,9 @@ Expresión regular:
 ^a(n$|mil$|narya$|nca$|nd$)
 
 En ambos casos, están diseñados de tal manera para que únicamente reconozcan palabras que SÍ formen parte del lenguaje, excluyendo cualquier otra.
-En el caso del autómata, este tiene más de un estado final (uno para cada una de las 5 palabras que debe de reconocer).
+En el caso del autómata, este tiene dos estados finales, ya que el autómata sigue diferentes "caminos" que representan cada una de las palabras, hasta llegar al estado final "Z", pero hay un caso especial: la palabra "An" es una de las 5 que el autómata debe de dar por buena, pero con las letras "An" también comienzan otras, como "Anarya", "Anca" y "And", así que hay un segundo estado final, el "C". Este estado final se activa después de recibir las letras "An", pero, al contrario que "Z", este sí tiene continuación, permitiendo al mismo tiempo evaluar si es la palabra "An" o si es una de las que comienzan por esas dos letras.
+
+
+(uno para cada una de las 5 palabras que debe de reconocer).
 Además, en un caso, hay un estado que puede o no ser final, ya que si el estado inicial "A" recibe 0, se sigue al estado "N" que puede ser final (formando la palabra "An") si no recibe nada o ser parte de una palabra más larga siguiendo otro estado si recibe 0, 1 o 2.
 También hay varios casos donde, por las letras que tiene una palabra, más de un número puede derivar en el mismo estado. Por ejemplo, si el estado inicial "A" recibe tanto 1 como 2, se sigue al estado "M".
