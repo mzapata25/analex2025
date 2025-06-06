@@ -24,6 +24,3 @@ En ambos casos, están diseñados de tal manera para que únicamente reconozcan 
 En el caso del autómata, este tiene dos estados finales, ya que el autómata sigue diferentes "caminos" que representan cada una de las palabras, hasta llegar al estado final "Z", pero hay un caso especial: la palabra "An" es una de las 5 que el autómata debe de dar por buena, pero con las letras "An" también comienzan otras, como "Anarya", "Anca" y "And", así que hay un segundo estado final, el "C". Este estado final se activa después de recibir las letras "An", pero, al contrario que "Z", este sí tiene continuación, permitiendo al mismo tiempo evaluar si es la palabra "An" o si es una de las que comienzan por esas dos letras.
 
 
-(uno para cada una de las 5 palabras que debe de reconocer).
-Además, en un caso, hay un estado que puede o no ser final, ya que si el estado inicial "A" recibe 0, se sigue al estado "N" que puede ser final (formando la palabra "An") si no recibe nada o ser parte de una palabra más larga siguiendo otro estado si recibe 0, 1 o 2.
-También hay varios casos donde, por las letras que tiene una palabra, más de un número puede derivar en el mismo estado. Por ejemplo, si el estado inicial "A" recibe tanto 1 como 2, se sigue al estado "M".
