@@ -28,4 +28,26 @@ En el caso del autómata, este tiene dos estados finales, ya que el autómata si
 Primero se creó una base de datos que tenga todos los caminos del autómata, teniendo en este orden: origen, destino y letra. El origen y destino son los estados, y la letra, es la que indica que ruta debe el autómata tomar. Además, se le indica al programa, los dos estados finales, para que lo pueda evaluar si la palabra introducida (siempre se introduce aquí en formato de lista) es correcta o no.
 La regla de automata es la que tiene la recursión para poder seguir evaluando por toda la palabra (o hasta que encuentre un fallo que lo haga salir antes), y su caso base compara el estado actual con el final, para determinar si esa palabra es del vocabulario o no.
 
+## Pruebas
+
+Se debe de abrir el archivo en Prolog o mediante una terminal que lo sepa interpretar, en este caso, ve hasta la carpeta donde está el archivo .pl e introduce "swipl automata_proyecto.pl".
+
+Una vez abierto, mediante el comando revisa_automata (por ejemplo se usaría así: "revisa_automata([a,n,i,l])", con la palabra separada en una lista de letras.
+Hay cinco palabras que dan resultado correcto (despliega true):
+
+1. An
+2. Amil
+3. Anca
+4. And
+5. Anarya
+
+Y aquí hay otras cinco que NO dan resultado (despliega false):
+
+1. Am
+2. Anil
+3. Ancn
+4. Anc
+5. Anaryd
+
+
 
