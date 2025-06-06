@@ -23,4 +23,9 @@ Expresión regular:
 En ambos casos, están diseñados de tal manera para que únicamente reconozcan palabras que SÍ formen parte del lenguaje, excluyendo cualquier otra.
 En el caso del autómata, este tiene dos estados finales, ya que el autómata sigue diferentes "caminos" que representan cada una de las palabras, hasta llegar al estado final "Z", pero hay un caso especial: la palabra "An" es una de las 5 que el autómata debe de dar por buena, pero con las letras "An" también comienzan otras, como "Anarya", "Anca" y "And", así que hay un segundo estado final, el "C". Este estado final se activa después de recibir las letras "An", pero, al contrario que "Z", este sí tiene continuación, permitiendo al mismo tiempo evaluar si es la palabra "An" o si es una de las que comienzan por esas dos letras.
 
+## Implementación
+
+Primero se creó una base de datos que tenga todos los caminos del autómata, teniendo en este orden: origen, destino y letra. El origen y destino son los estados, y la letra, es la que indica que ruta debe el autómata tomar. Además, se le indica al programa, los dos estados finales, para que lo pueda evaluar si la palabra introducida (siempre se introduce aquí en formato de lista) es correcta o no.
+La regla de automata es la que tiene la recursión para poder seguir evaluando por toda la palabra (o hasta que encuentre un fallo que lo haga salir antes), y su caso base compara el estado actual con el final, para determinar si esa palabra es del vocabulario o no.
+
 
