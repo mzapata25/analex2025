@@ -4,6 +4,8 @@ Por: Mateo Rodrigo Zapata Crapa (A01708573)
 ## Descripción
 Para este proyecto, todas las palabras usadas aquí provienen del lenguaje Quenya, uno de los varios lenguajes élficos creados por J. R. R. Tolkien (Quenya - Wikipedia, la enciclopedia libre, 2024).
 
+El analizador léxico de este proyecto será usado con una base de un autómata finito determínistico. Este tipo de estructura se caracteriza por ir cambiando de manera automatizada según las instrucciones proporcionadas y por no tener ambigüedad, o sea, siempre que recibe una instrucción, realizará la misma acción, como desplazarse a otro estado, es la parte a la que nos referimos cuando decimos que es determinístico.
+
 Este proyecto consiste en construir un analizador léxico que pueda determinar si una palabra es parte del lenguaje o no.
 En este caso, correspondía averiguar si una palabra forma parte del lenguaje compuesto por las palabras (amil, an, anarya, anca y and).
 Para este fin, se construyó tanto un autómata como una expresión regular que solamente admiten una palabra del lenguaje y descartan cualquier otra.
