@@ -50,4 +50,15 @@ Y aquí hay otras cinco que NO dan resultado (despliega false):
 5. Anaryd
 
 
+## Análisis
+
+Debido a que recorre todo de manera lineal (además de no disponer ni de memoria ni estados) tiene una complejidad temporal de O(n). Esto significa que el programa acabará después de n procesos, en este caso, cada comparación. Es una solución eficiente, ya que, por lo menos aquí, es un grupo pequeño de palabras, cuyo analizador léxico debería ser capaz de procesar sin tardarse mucho.
+
+Viendo otro tipo de soluciones, existe el autómata finito NO determinado, dejando la puerta abierta para resultados inciertos. Eso puede funcionar en ciertos contextos, pero como se ha mencionado anteriormente, hace que sea más complicado de programar, siendo algo innecesario también si ya existe una mejor solución.
+
+## Referencias
+
+Autómata finito determinista - Wikipedia, la enciclopedia libre. (12 de Julio de 2019). Obtenido de Wikipedia, la enciclopedia libre: https://es.wikipedia.org/wiki/Aut%C3%B3mata_finito_determinista
+Quenya - Wikipedia, la enciclopedia libre. (20 de Diciembre de 2024). Obtenido de Wikipedia, la enciclopedia libre: https://es.wikipedia.org/wiki/Quenya
+
 
